@@ -7,7 +7,9 @@ molecule_exceptions:
   - variation: "Fedora*"
     reason: "repo only supports RedHat/CentOS Server"
   - variation: "centos-stream9"
-    reason: "repo only supports RedHat/CentOS Server"
+    reason: "repo not supported"
+  - variation: "amazonlinux"
+    reason: "repo not supported"
 
 molecule_scenarios:
   - scenario: "default"
@@ -16,6 +18,5 @@ molecule_scenarios:
       - "centos7"
       - "centos-stream8"
       - "ubi8"
-      - "amazonlinux"
       - "rockylinux8"
       - "almalinux8"

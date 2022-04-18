@@ -62,7 +62,6 @@ This role has been tested on these [container images](https://hub.docker.com/u/m
 -   [centos7](https://hub.docker.com/r/mullholland/docker-molecule-centos7)
 -   [centos-stream8](https://hub.docker.com/r/mullholland/docker-molecule-centos-stream8)
 -   [ubi8](https://hub.docker.com/r/mullholland/docker-molecule-ubi8)
--   [amazonlinux](https://hub.docker.com/r/mullholland/docker-molecule-amazonlinux)
 -   [rockylinux8](https://hub.docker.com/r/mullholland/docker-molecule-rockylinux8)
 -   [almalinux8](https://hub.docker.com/r/mullholland/docker-molecule-almalinux8)
 
@@ -83,7 +82,8 @@ Some variations of the build matrix do not work. These are the variations and re
 | Ubuntu* | repo only supports RedHat/CentOS Server |
 | Debian* | repo only supports RedHat/CentOS Server |
 | Fedora* | repo only supports RedHat/CentOS Server |
-| centos-stream9 | repo only supports RedHat/CentOS Server |
+| centos-stream9 | repo not supported |
+| amazonlinux | repo not supported |
 
 
 If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_elrepo/issues)
