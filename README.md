@@ -62,7 +62,6 @@ This role has been tested on these [container images](https://hub.docker.com/u/m
 -   [centos7](https://hub.docker.com/r/mullholland/docker-molecule-centos7)
 -   [centos-stream8](https://hub.docker.com/r/mullholland/docker-molecule-centos-stream8)
 -   [ubi8](https://hub.docker.com/r/mullholland/docker-molecule-ubi8)
--   [amazonlinux](https://hub.docker.com/r/mullholland/docker-molecule-amazonlinux)
 -   [rockylinux8](https://hub.docker.com/r/mullholland/docker-molecule-rockylinux8)
 -   [almalinux8](https://hub.docker.com/r/mullholland/docker-molecule-almalinux8)
 
