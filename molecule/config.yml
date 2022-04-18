@@ -1,0 +1,21 @@
+---
+molecule_exceptions:
+  - variation: "Ubuntu*"
+    reason: "repo only supports RedHat/CentOS Server"
+  - variation: "Debian*"
+    reason: "repo only supports RedHat/CentOS Server"
+  - variation: "Fedora*"
+    reason: "repo only supports RedHat/CentOS Server"
+  - variation: "centos-stream9"
+    reason: "repo only supports RedHat/CentOS Server"
+
+molecule_scenarios:
+  - scenario: "default"
+    ansible: ["previous", "current", "next"]
+    platforms:
+      - "centos7"
+      - "centos-stream8"
+      - "ubi8"
+      - "amazonlinux"
+      - "rockylinux8"
+      - "almalinux8"

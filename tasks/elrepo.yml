@@ -1,0 +1,16 @@
+---
+- name: RedHat/CentOS | Import ELRepo GPG key.
+  ansible.builtin.rpm_key:
+    key: "{{ repository_elrepo_key_url }}"
+    state: present
+  register: result
+  until: result is succeeded
+  retries: 5
+  delay: 10
+
+- name: RedHat/CentOS | Install ELRepo repository
+  ansible.builtin.yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ repository_elrepo_version }}"
