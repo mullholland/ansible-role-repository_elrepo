@@ -83,7 +83,8 @@ Some variations of the build matrix do not work. These are the variations and re
 | Ubuntu* | repo only supports RedHat/CentOS Server |
 | Debian* | repo only supports RedHat/CentOS Server |
 | Fedora* | repo only supports RedHat/CentOS Server |
-| centos-stream9 | repo only supports RedHat/CentOS Server |
+| centos-stream9 | repo not supported |
+| amazonlinux | repo not supported |
 
 
 If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_elrepo/issues)
