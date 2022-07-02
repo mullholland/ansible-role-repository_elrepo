@@ -13,7 +13,7 @@ molecule_exceptions:
 
 molecule_scenarios:
   - scenario: "default"
-    ansible: ["previous", "current", "next"]
+    ansible: ["previous", "current", "development"]
     platforms:
       - "centos7"
       - "centos-stream8"
