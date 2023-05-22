@@ -10,13 +10,17 @@ repository_elrepo_version_map:
   RedHat:
     "7": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
+    "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
   CentOS:
     "7": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
+    "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
   Rocky:
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
+    "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
   AlmaLinux:
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
+    "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
   Amazon:
     "2": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
 

@@ -38,7 +38,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [centos7, centos-stream8, ubi8, rockylinux8, almalinux8]  # yamllint disable-line rule:line-length
+        platform: [centos7, centos-stream8, centos-stream9, ubi8, ubi9, rockylinux8, rockylinux9, almalinux8, almalinux9]  # yamllint disable-line rule:line-length
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -54,7 +54,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [centos7, centos-stream8, ubi8, rockylinux8, almalinux8]  # yamllint disable-line rule:line-length
+        platform: [centos7, centos-stream8, centos-stream9, ubi8, ubi9, rockylinux8, rockylinux9, almalinux8, almalinux9]  # yamllint disable-line rule:line-length
     steps:
       - name: checkout
         uses: actions/checkout@v3

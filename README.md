@@ -22,13 +22,17 @@ repository_elrepo_version_map:
   RedHat:
     "7": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
+    "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
   CentOS:
     "7": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
+    "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
   Rocky:
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
+    "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
   AlmaLinux:
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
+    "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
   Amazon:
     "2": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
 
@@ -61,9 +65,13 @@ This role has been tested on these [container images](https://hub.docker.com/u/m
 
 -   [centos7](https://hub.docker.com/r/mullholland/docker-molecule-centos7)
 -   [centos-stream8](https://hub.docker.com/r/mullholland/docker-molecule-centos-stream8)
+-   [centos-stream9](https://hub.docker.com/r/mullholland/docker-molecule-centos-stream9)
 -   [ubi8](https://hub.docker.com/r/mullholland/docker-molecule-ubi8)
+-   [ubi9](https://hub.docker.com/r/mullholland/docker-molecule-ubi9)
 -   [rockylinux8](https://hub.docker.com/r/mullholland/docker-molecule-rockylinux8)
+-   [rockylinux9](https://hub.docker.com/r/mullholland/docker-molecule-rockylinux9)
 -   [almalinux8](https://hub.docker.com/r/mullholland/docker-molecule-almalinux8)
+-   [almalinux9](https://hub.docker.com/r/mullholland/docker-molecule-almalinux9)
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 
