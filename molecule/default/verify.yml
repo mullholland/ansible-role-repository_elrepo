@@ -7,6 +7,7 @@
     molecule_package:
       "7": "yum-plugin-elrepo"
       "8": "hfsutils"
+      "9": "hfsutils"
 
   tasks:
     - name: SmokeTests

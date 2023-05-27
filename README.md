@@ -1,14 +1,33 @@
 # [repository_elrepo](#repository_elrepo)
 
-|GitHub|GitLab|
-|------|------|
-|[![github](https://github.com/mullholland/ansible-role-repository_elrepo/workflows/Ansible%20Molecule/badge.svg)](https://github.com/mullholland/ansible-role-repository_elrepo/actions)|[![gitlab](https://gitlab.com/mullholland/ansible-role-repository_elrepo/badges/main/pipeline.svg)](https://gitlab.com/mullholland/ansible-role-repository_elrepo)|
+Add the elrepo to your system
 
-description
+|GitHub|GitLab|Quality|Downloads|Version|
+|------|------|-------|---------|-------|
+|[![github](https://github.com/mullholland/ansible-role-repository_elrepo/workflows/Ansible%20Molecule/badge.svg)](https://github.com/mullholland/ansible-role-repository_elrepo/actions)|[![gitlab](https://gitlab.com/opensourceunicorn/ansible-role-repository_elrepo/badges/master/pipeline.svg)](https://gitlab.com/opensourceunicorn/ansible-role-repository_elrepo)|[![quality](https://img.shields.io/ansible/quality/58831)](https://galaxy.ansible.com/mullholland/repository_elrepo)|[![downloads](https://img.shields.io/ansible/role/d/58831)](https://galaxy.ansible.com/mullholland/repository_elrepo)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_elrepo.svg)](https://github.com/mullholland/ansible-role-repository_elrepo/releases/)|
+
+## [Example Playbook](#example-playbook)
+
+This example is taken from [`molecule/default/converge.yml`](https://github.com/mullholland/ansible-role-repository_elrepo/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
+
+```yaml
+---
+- name: Converge
+  hosts: all
+  become: true
+  gather_facts: true
+  # vars:
+  #   example_var: "value"
+  roles:
+    - role: "mullholland.repository_elrepo"
+```
+
+Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
 
 ## [Role Variables](#role-variables)
 
-These variables are set in `defaults/main.yml`:
+The default values for the variables are set in [`defaults/main.yml`](https://github.com/mullholland/ansible-role-repository_elrepo/blob/master/defaults/main.yml):
+
 ```yaml
 ---
 # Install the ELRepo
@@ -35,75 +54,47 @@ repository_elrepo_version_map:
     "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
   Amazon:
     "2": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
+    "2023": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
 
 repository_elrepo_version: "{{ repository_elrepo_version_map[ansible_distribution][ansible_distribution_major_version] }}"
 ```
 
+## [Requirements](#requirements)
 
-## [Example Playbook](#example-playbook)
-
-This example is taken from `molecule/default/converge.yml` and is tested on each push, pull request and release.
-```yaml
----
-- name: Converge
-  hosts: all
-  become: true
-  gather_facts: true
-  # vars:
-  #   example_var: "value"
-  roles:
-    - role: "mullholland.repository_elrepo"
-```
+- pip packages listed in [requirements.txt](https://github.com/mullholland/ansible-role-repository_elrepo/blob/master/requirements.txt).
 
 
+## [Context](#context)
 
+This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://mullholland.net) for further information.
 
+Here is an overview of related roles:
+![dependencies](https://raw.githubusercontent.com/mullholland/ansible-role-repository_elrepo/png/requirements.png "Dependencies")
 
 ## [Compatibility](#compatibility)
 
 This role has been tested on these [container images](https://hub.docker.com/u/mullholland):
 
--   [centos7](https://hub.docker.com/r/mullholland/docker-molecule-centos7)
--   [centos-stream8](https://hub.docker.com/r/mullholland/docker-molecule-centos-stream8)
--   [centos-stream9](https://hub.docker.com/r/mullholland/docker-molecule-centos-stream9)
--   [ubi8](https://hub.docker.com/r/mullholland/docker-molecule-ubi8)
--   [ubi9](https://hub.docker.com/r/mullholland/docker-molecule-ubi9)
--   [rockylinux8](https://hub.docker.com/r/mullholland/docker-molecule-rockylinux8)
--   [rockylinux9](https://hub.docker.com/r/mullholland/docker-molecule-rockylinux9)
--   [almalinux8](https://hub.docker.com/r/mullholland/docker-molecule-almalinux8)
--   [almalinux9](https://hub.docker.com/r/mullholland/docker-molecule-almalinux9)
+|container|tags|
+|---------|----|
+|[EL](https://hub.docker.com/repository/docker/mullholland/docker-centos-systemd/general)|all|
+|[Amazon](https://hub.docker.com/repository/docker/mullholland/docker-amazonlinux-systemd/general)|Candidate|
+|[Fedora](https://hub.docker.com/repository/docker/mullholland/docker-fedora-systemd/general)|all|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 
--   The previous versions.
--   The current version.
-
-
-
-## [Exceptions](#exceptions)
-
-Some variations of the build matrix do not work. These are the variations and reasons why the build won't work:
-
-| variation                 | reason                 |
-|---------------------------|------------------------|
-| Ubuntu* | repo only supports RedHat/CentOS Server |
-| Debian* | repo only supports RedHat/CentOS Server |
-| Fedora* | repo only supports RedHat/CentOS Server |
-| centos-stream9 | repo not supported |
-| amazonlinux | repo not supported |
-
+- The previous version.
+- The current version.
+- The development version.
 
 If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_elrepo/issues)
 
 ## [License](#license)
 
-MIT
-
+[MIT](https://github.com/mullholland/ansible-role-repository_elrepo/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 
-[Mullholland](https://github.com/mullholland)
+[Mullholland](https://mullholland.net)
 
-## [Special Thanks](#special-thanks)
-
-Template inspired by [Robert de Bock](https://github.com/robertdebock)
+Please consider [sponsoring me](https://github.com/sponsors/mullholland).
