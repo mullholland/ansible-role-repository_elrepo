@@ -51,9 +51,6 @@ repository_elrepo_version_map:
   AlmaLinux:
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
     "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
-  Amazon:
-    "2": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
-    "2023": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
 
 repository_elrepo_version: "{{ repository_elrepo_version_map[ansible_distribution][ansible_distribution_major_version] }}"
 ```
@@ -77,7 +74,6 @@ This role has been tested on these [container images](https://hub.docker.com/u/m
 |container|tags|
 |---------|----|
 |[EL](https://hub.docker.com/repository/docker/mullholland/docker-centos-systemd/general)|all|
-|[Amazon](https://hub.docker.com/repository/docker/mullholland/docker-amazonlinux-systemd/general)|2|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 

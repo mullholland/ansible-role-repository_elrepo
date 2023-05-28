@@ -21,8 +21,5 @@ repository_elrepo_version_map:
   AlmaLinux:
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
     "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
-  Amazon:
-    "2": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
-    "2023": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
 
 repository_elrepo_version: "{{ repository_elrepo_version_map[ansible_distribution][ansible_distribution_major_version] }}"
