@@ -36,13 +36,7 @@ jobs:
           - image: "centos"
             tag: "latest"
           - image: "amazonlinux"
-            tag: "latest"
-          - image: "fedora"
-            tag: "36"
-          - image: "fedora"
-            tag: "latest"
-          - image: "fedora"
-            tag: "rawhide"
+            tag: "2"
     steps:
       - name: checkout
         uses: actions/checkout@v3

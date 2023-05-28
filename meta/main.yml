@@ -14,11 +14,7 @@ galaxy_info:
         - all
     - name: Amazon
       versions:
-        - Candidate
-    - name: Fedora
-      versions:
-        - all
-
+        - "Candidate"
 
   galaxy_tags:
     - packaging
