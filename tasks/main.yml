@@ -1,5 +1,6 @@
 ---
-- include_tasks: elrepo.yml
+- name: Include elrepo.yml
+  ansible.builtin.include_tasks: elrepo.yml
   when:
     - (ansible_distribution == "Amazon" and
       ansible_distribution_major_version == "2") or
