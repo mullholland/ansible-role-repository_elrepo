@@ -1,11 +1,10 @@
-# [repository_elrepo](#repository_elrepo)
+# [Ansible role repository_elrepo](#repository_elrepo)
 
 Add the elrepo to your system
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/mullholland/ansible-role-repository_elrepo/workflows/Ansible%20Molecule/badge.svg)](https://github.com/mullholland/ansible-role-repository_elrepo/actions)|[![gitlab](https://gitlab.com/opensourceunicorn/ansible-role-repository_elrepo/badges/master/pipeline.svg)](https://gitlab.com/opensourceunicorn/ansible-role-repository_elrepo)|[![quality](https://img.shields.io/ansible/quality/58831)](https://galaxy.ansible.com/mullholland/repository_elrepo)|[![downloads](https://img.shields.io/ansible/role/d/58831)](https://galaxy.ansible.com/mullholland/repository_elrepo)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_elrepo.svg)](https://github.com/mullholland/ansible-role-repository_elrepo/releases/)|
-
+|GitHub|Downloads|Version|
+|------|---------|-------|
+|[![github](https://github.com/mullholland/ansible-role-repository_elrepo/actions/workflows/molecule.yml/badge.svg)](https://github.com/mullholland/ansible-role-repository_elrepo/actions/workflows/molecule.yml)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/mullholland/repository_elrepo)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_elrepo.svg)](https://github.com/mullholland/ansible-role-repository_elrepo/releases/)|
 ## [Example Playbook](#example-playbook)
 
 This example is taken from [`molecule/default/converge.yml`](https://github.com/mullholland/ansible-role-repository_elrepo/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
@@ -21,6 +20,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   roles:
     - role: "mullholland.repository_elrepo"
 ```
+
 
 
 ## [Role Variables](#role-variables)
@@ -73,7 +73,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/m
 
 |container|tags|
 |---------|----|
-|[EL](https://hub.docker.com/repository/docker/mullholland/docker-centos-systemd/general)|all|
+|[EL](https://hub.docker.com/r/mullholland/enterpriselinux)|all|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 
@@ -81,7 +81,7 @@ The minimum version of Ansible required is 2.10, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_elrepo/issues)
+If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_elrepo/issues).
 
 ## [License](#license)
 
@@ -90,5 +90,3 @@ If you find issues, please register them in [GitHub](https://github.com/mullholl
 ## [Author Information](#author-information)
 
 [Mullholland](https://mullholland.net)
-
-Please consider [sponsoring me](https://github.com/sponsors/mullholland).
