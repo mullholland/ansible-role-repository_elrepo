@@ -4,7 +4,7 @@ Add the elrepo to your system
 
 |GitHub|Downloads|Version|
 |------|---------|-------|
-|[![github](https://github.com/mullholland/ansible-role-repository_elrepo/actions/workflows/molecule.yml/badge.svg)](https://github.com/mullholland/ansible-role-repository_elrepo/actions/workflows/molecule.yml)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/mullholland/repository_elrepo)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_elrepo.svg)](https://github.com/mullholland/ansible-role-repository_elrepo/releases/)|
+|[![github](https://github.com/mullholland/ansible-role-repository_elrepo/actions/workflows/molecule.yml/badge.svg)](https://github.com/mullholland/ansible-role-repository_elrepo/actions/workflows/molecule.yml)|[![downloads](https://img.shields.io/ansible/role/d/mullholland/repository_elrepo)](https://galaxy.ansible.com/mullholland/repository_elrepo)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_elrepo.svg)](https://github.com/mullholland/ansible-role-repository_elrepo/releases/)|
 ## [Example Playbook](#example-playbook)
 
 This example is taken from [`molecule/default/converge.yml`](https://github.com/mullholland/ansible-role-repository_elrepo/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
