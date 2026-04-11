@@ -1,16 +1,26 @@
 ---
-- name: elrepo | Import ELRepo GPG key.
-  ansible.builtin.rpm_key:
-    key: "{{ repository_elrepo_key_url }}"
-    state: present
+- name: elrepo | Download ELRepo GPG key
+  ansible.builtin.get_url:
+    url: "{{ repository_elrepo_key_url }}"
+    dest: /tmp/elrepo-gpg-key.asc
+    mode: "0644"
   register: result
   until: result is succeeded
   retries: 5
   delay: 10
 
-- name: elrepo | Install ELRepo repository
-  ansible.builtin.yum:
-    name: "{{ item }}"
+- name: elrepo | Import ELRepo GPG key
+  ansible.builtin.rpm_key:
+    key: /tmp/elrepo-gpg-key.asc
     state: present
-  with_items:
-    - "{{ repository_elrepo_version }}"
+  failed_when: false
+
+- name: elrepo | Install ELRepo release RPM
+  ansible.builtin.dnf:
+    name: "{{ repository_elrepo_version }}"
+    state: present
+    disable_gpg_check: true
+  register: result
+  until: result is succeeded
+  retries: 5
+  delay: 10

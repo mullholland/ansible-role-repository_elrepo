@@ -15,12 +15,10 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   hosts: all
   become: true
   gather_facts: true
-  # vars:
-  #   example_var: "value"
-  roles:
-    - role: "mullholland.repository_elrepo"
-```
 
+  roles:
+    - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') }}"
+```
 
 
 ## [Role Variables](#role-variables)
@@ -30,10 +28,28 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 ```yaml
 ---
 # Install the ELRepo
-# https://elrepo.org/tiki/HomePage
+# https://elrepo.org/wiki/doku.php?id=start
 
 # ELRepo public key
-repository_elrepo_key_url: " https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+repository_elrepo_key_map:
+  RedHat:
+    "7": "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+    "8": "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+    "9": "https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org"
+    "10": "https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org"
+  CentOS:
+    "7": "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+    "8": "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+    "9": "https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org"
+  Rocky:
+    "8": "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+    "9": "https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org"
+    "10": "https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org"
+  AlmaLinux:
+    "8": "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+    "9": "https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org"
+    "10": "https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org"
+repository_elrepo_key_url: "{{ repository_elrepo_key_map[ansible_facts['distribution']][ansible_facts['distribution_major_version']] }}"
 
 # ELRepo install packages
 repository_elrepo_version_map:
@@ -41,6 +57,7 @@ repository_elrepo_version_map:
     "7": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
     "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
+    "10": "https://www.elrepo.org/elrepo-release-10.el10.elrepo.noarch.rpm"
   CentOS:
     "7": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
@@ -48,11 +65,13 @@ repository_elrepo_version_map:
   Rocky:
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
     "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
+    "10": "https://www.elrepo.org/elrepo-release-10.el10.elrepo.noarch.rpm"
   AlmaLinux:
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
     "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
+    "10": "https://www.elrepo.org/elrepo-release-10.el10.elrepo.noarch.rpm"
 
-repository_elrepo_version: "{{ repository_elrepo_version_map[ansible_distribution][ansible_distribution_major_version] }}"
+repository_elrepo_version: "{{ repository_elrepo_version_map[ansible_facts['distribution']][ansible_facts['distribution_major_version']] }}"
 ```
 
 ## [Requirements](#requirements)
@@ -64,9 +83,6 @@ repository_elrepo_version: "{{ repository_elrepo_version_map[ansible_distributio
 
 This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://mullholland.net) for further information.
 
-Here is an overview of related roles:
-![dependencies](https://raw.githubusercontent.com/mullholland/ansible-role-repository_elrepo/png/requirements.png "Dependencies")
-
 ## [Compatibility](#compatibility)
 
 This role has been tested on these [container images](https://hub.docker.com/u/mullholland):
@@ -77,9 +93,9 @@ This role has been tested on these [container images](https://hub.docker.com/u/m
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 
+- The version before the previous version.
 - The previous version.
 - The current version.
-- The development version.
 
 If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_elrepo/issues).
 
