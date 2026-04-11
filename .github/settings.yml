@@ -5,4 +5,4 @@
 repository:
   description: Add the elrepo to your system
   homepage: https://mullholland.net
-  topics: packaging, system, ansible, molecule, tox, playbook
+  topics: packaging, system, ansible, molecule, playbook
