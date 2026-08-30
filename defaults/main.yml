@@ -13,6 +13,7 @@ repository_elrepo_key_map:
     "7": "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
     "8": "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
     "9": "https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org"
+    "10": "https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org"
   Rocky:
     "8": "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
     "9": "https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org"
@@ -34,6 +35,7 @@ repository_elrepo_version_map:
     "7": "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
     "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
+    "10": "https://www.elrepo.org/elrepo-release-10.el10.elrepo.noarch.rpm"
   Rocky:
     "8": "https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
     "9": "https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
